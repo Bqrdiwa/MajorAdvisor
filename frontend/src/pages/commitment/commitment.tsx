@@ -134,6 +134,7 @@ export default function Commitment() {
                 />
                 <Button
                   color="primary"
+                  variant="flat"
                   className={buttonStyle + " w-full rounded-md relative"}
                 >
                   <input
@@ -142,7 +143,7 @@ export default function Commitment() {
                     accept="image/*"
                     onChange={handleFileChange}
                   />
-                  آپلود تعهدنامه
+                  آپلود مجدد
                 </Button>
               </div>
             </div>
