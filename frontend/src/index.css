@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@plugin './hero.ts';
+/* Note: You may need to change the path to fit your project structure */
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+ @config "../tailwind.config.js";
+
+
+ /* src/styles/fonts.css */
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/Vazirmatn/static/Vazirmatn-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/Vazirmatn/static/Vazirmatn-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/Vazirmatn/static/Vazirmatn-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/Vazirmatn/static/Vazirmatn-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/Vazirmatn/static/Vazirmatn-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/Vazirmatn/static/Vazirmatn-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/Vazirmatn/static/Vazirmatn-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/Vazirmatn/static/Vazirmatn-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/Vazirmatn/static/Vazirmatn-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/Vazirmatn/static/Vazirmatn-ExtraLight.woff2') format('woff2');
+  font-style: normal;
+}
+
+
+@layer base {
+    body {
+        font-family: "Vazirmatn", Arial, Helvetica, sans-serif;
+    }
+}
+
+@layer components {
+  .bg-tile {
+    @apply bg-[url('/tile.png')] bg-repeat;
+
+  }
+
+  input::placeholder {
+    @apply text-right;
+
+  }
+}
