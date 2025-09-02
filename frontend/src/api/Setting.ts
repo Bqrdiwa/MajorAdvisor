@@ -4,7 +4,7 @@
 export const APPLICATION_TITLE = ""
 // application name for toast, 
 
-export const BACKEND_BASE_URL = "https://apitest.pargarx.ir"
+export const BACKEND_BASE_URL = "https://api.pargarx.ir"
 export const GET_CITY_ENDPOINT = (name:string) => (`https://iranplacesapi.liara.run/api/provinces/name/${name}/cities`)
 
 

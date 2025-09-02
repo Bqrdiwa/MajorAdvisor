@@ -66,7 +66,7 @@ export default function Education({
         defaultValue={
           formData.academicGpaTotal ? formData.academicGpaTotal : undefined
         }
-        label="نمره کل سابقه تحصیلی"
+        label="نمره کل سابقه تحصیلی (آموزش و پرورش)"
         name="academicGpaTotal"
         placeholder="نمره را وارد کنید "
         labelPlacement="outside"
@@ -95,7 +95,7 @@ export default function Education({
         type="text"
         classNames={inputStyle}
         isDisabled={isAttended}
-        label="نمره کل آزمون اختصاصی"
+        label="نمره کل آزمون اختصاصی (کنکور)"
         defaultValue={
           formData.examTotalSpecial ? formData.examTotalSpecial : undefined
         }
@@ -108,7 +108,7 @@ export default function Education({
       <Input
         variant="bordered"
         classNames={inputStyle}
-        label="نمره کل نهایی"
+        label="نمره کل نهایی (تراز نهایی)"
         defaultValue={
           formData.examFinalTotal ? formData.examFinalTotal : undefined
         }
@@ -128,7 +128,7 @@ export default function Education({
         }
         isRequired
         isDisabled={isAttended}
-        label="تراز کل در سهمیه نهایی"
+        label="تراز کل در سهمیه نهایی (رتبه کشوری بدون اعمال سهمیه)"
         name="finalQuotaScore"
         placeholder="تراز را وارد کنید مثلا (۸۷۹۵)"
         labelPlacement="outside"

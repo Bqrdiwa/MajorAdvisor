@@ -226,13 +226,13 @@ export default function BaseAuth({
         const data: Record<string, any> = res.data;
         const valid: Record<string, any> = {};
         Object.entries(data).forEach(([key, value]) => {
+          console.log(formData, key)
           if (Object.keys(step.payload).includes(key) && value) {
             valid[key] = value;
           }
         });
-
         if (valid) {
-          setFormData({ ...formData, ...valid });
+          setFormData(prev => ({ ...prev, ...valid}));
         }
       }
     } finally {
@@ -240,7 +240,7 @@ export default function BaseAuth({
       setFormDisabled(false);
     }
   };
-  const next = (formD: any) => {
+  const next = () => {
     let add = 1;
     if(getsummery == false && location.hash != "#signup" && localStorage.getItem("access")){
       nav("/")
@@ -248,7 +248,7 @@ export default function BaseAuth({
     if (
       step != undefined &&
       step.title == "اطلاعات تحصیلی" &&
-      formD.notAttended1404 == true
+      formData.notAttended1404 == true
     ) {
       add = 2;
     }
@@ -259,9 +259,9 @@ export default function BaseAuth({
     }
   };
   const updateFormData = (payload: Record<string, any>) => {
-    const nextFunc = { ...formData, ...payload };
-    setFormData(nextFunc);
-    next(nextFunc);
+    console.log(payload)
+    setFormData(prev => ({...prev,...payload}));
+    next();
   };
   useEffect(() => {
     fetchProfileData(state);

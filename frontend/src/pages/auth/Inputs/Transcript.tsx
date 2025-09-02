@@ -228,7 +228,7 @@ export default function Transcript({ loading, formData, back }: InputProps) {
           wrapper: "grid grid-cols-2 gap-[1px] rounded-xl overflow-hidden",
           label: "pr-4",
         }}
-        label="دانشگاه آزاد اسلامی"
+        label="دانشگاه آزاد اسلامی (به جز ۴ رشته)"
       >
         <CustomRadio value="true">مجاز</CustomRadio>
         <CustomRadio value="false">غیر مجاز</CustomRadio>

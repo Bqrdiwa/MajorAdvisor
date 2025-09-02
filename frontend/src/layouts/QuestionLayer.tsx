@@ -37,21 +37,21 @@ export default function QuestionLayer() {
         nav("/auth#signup");
         break;
     }
-    handleOpenChange();
+    onOpenChange();
   }, [question, nav]);
 
   // Open modal once on mount
   useEffect(() => {
-    location.pathname !== "/auth" && !question && onOpen();
+    !question && onOpen();
   }, [onOpen, location.pathname]);
   const handleOpenChange = () => {
     setQuestion("done");
-    onOpenChange();
+    
   };
   return (
     <>
       <Modal hideCloseButton isOpen={isOpen} onOpenChange={handleOpenChange}>
-        <ModalContent className="max-w-xl relative pargarX">
+        <ModalContent className="max-w-3xl relative pargarX">
           <div className=" absolute flex top-0 left-0 w-full justify-between">
             <Image className="rounded-none" src={Vector2} />
             <Image className="rounded-none hidden sm:block" src={Vector3} />
